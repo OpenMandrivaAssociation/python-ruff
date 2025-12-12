@@ -8,7 +8,7 @@
 
 Name:		python-ruff
 Version:	0.11.3
-Release:	1
+Release:	2
 Summary:	An extremely fast Python linter and code formatter, written in Rust
 URL:		https://pypi.org/project/ruff/
 License:	MIT
