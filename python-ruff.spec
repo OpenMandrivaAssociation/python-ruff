@@ -7,22 +7,23 @@
 # NOTE	Source1 & yml.
 
 Name:		python-ruff
-Version:	0.11.3
-Release:	3
+Version:	0.14.10
+Release:	1
 Summary:	An extremely fast Python linter and code formatter, written in Rust
 URL:		https://pypi.org/project/ruff/
 License:	MIT
 Group:		Development/Python
 Source0:	https://files.pythonhosted.org/packages/source/r/ruff/%{oname}-%{version}.tar.gz
-Source1:	ruff-0.11.3-vendor.tar.xz
+Source1:	%{module}-%{version}-vendor.tar.xz
 BuildSystem:	python
 
+BuildRequires:	cargo
+BuildRequires:	make
+BuildRequires:	pkgconfig(python)
 BuildRequires:	python
-BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(maturin)
 BuildRequires:	python%{pyver}dist(wheel)
-BuildRequires:	cargo
 BuildRequires:	rust-packaging
 
 %description
@@ -45,9 +46,9 @@ git = "https://github.com/astral-sh/lsp-types.git"
 rev = "3512a9f"
 replace-with = "vendored-sources"
 
-[source."git+https://github.com/salsa-rs/salsa.git?rev=d758691ba17ee1a60c5356ea90888d529e1782ad"]
+[source."git+https://github.com/salsa-rs/salsa.git?rev=55e5e7d32fa3fc189276f35bb04c9438f9aedbd1"]
 git = "https://github.com/salsa-rs/salsa.git"
-rev = "d758691ba17ee1a60c5356ea90888d529e1782ad"
+rev = "55e5e7d32fa3fc189276f35bb04c9438f9aedbd1"
 replace-with = "vendored-sources"
 
 [source.vendored-sources]
