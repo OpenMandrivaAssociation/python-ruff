@@ -7,7 +7,7 @@
 # NOTE	Source1 & yml.
 
 Name:		python-ruff
-Version:	0.14.10
+Version:	0.14.13
 Release:	1
 Summary:	An extremely fast Python linter and code formatter, written in Rust
 URL:		https://pypi.org/project/ruff/
@@ -32,7 +32,6 @@ An extremely fast Python linter and code formatter, written in Rust.
 Ruff aims to be orders of magnitude faster than alternative tools while
 integrating more functionality behind a single, common interface.
 
-
 %prep
 %autosetup -n %{module}-%{version} -p1 -a1
 %cargo_prep -v vendor
@@ -46,21 +45,15 @@ git = "https://github.com/astral-sh/lsp-types.git"
 rev = "3512a9f"
 replace-with = "vendored-sources"
 
-[source."git+https://github.com/salsa-rs/salsa.git?rev=55e5e7d32fa3fc189276f35bb04c9438f9aedbd1"]
+[source."git+https://github.com/salsa-rs/salsa.git?rev=9860ff6ca0f1f8f3a8d6b832020002790b501254"]
 git = "https://github.com/salsa-rs/salsa.git"
-rev = "55e5e7d32fa3fc189276f35bb04c9438f9aedbd1"
+rev = "9860ff6ca0f1f8f3a8d6b832020002790b501254"
 replace-with = "vendored-sources"
 
 [source.vendored-sources]
 directory = "vendor"
 
 EOF
-
-%build
-%py_build
-
-%install
-%py3_install
 
 %files
 %{_bindir}/%{module}
