@@ -7,7 +7,7 @@
 # NOTE	Source1 & yml.
 
 Name:		python-ruff
-Version:	0.14.13
+Version:	0.14.14
 Release:	1
 Summary:	An extremely fast Python linter and code formatter, written in Rust
 URL:		https://pypi.org/project/ruff/
