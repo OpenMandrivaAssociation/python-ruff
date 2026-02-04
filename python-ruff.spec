@@ -1,4 +1,4 @@
-%undefine _debugsource_packages
+%undefine _debugsource_template
 %define module ruff
 %define oname ruff
 
@@ -7,7 +7,7 @@
 # NOTE	Source1 & yml.
 
 Name:		python-ruff
-Version:	0.14.14
+Version:	0.15.0
 Release:	1
 Summary:	An extremely fast Python linter and code formatter, written in Rust
 URL:		https://pypi.org/project/ruff/
@@ -45,14 +45,13 @@ git = "https://github.com/astral-sh/lsp-types.git"
 rev = "3512a9f"
 replace-with = "vendored-sources"
 
-[source."git+https://github.com/salsa-rs/salsa.git?rev=9860ff6ca0f1f8f3a8d6b832020002790b501254"]
+[source."git+https://github.com/salsa-rs/salsa.git?rev=e9b9ddd4bec50ac777e9353bbb8f1180e5669d89"]
 git = "https://github.com/salsa-rs/salsa.git"
-rev = "9860ff6ca0f1f8f3a8d6b832020002790b501254"
+rev = "e9b9ddd4bec50ac777e9353bbb8f1180e5669d89"
 replace-with = "vendored-sources"
 
 [source.vendored-sources]
 directory = "vendor"
-
 EOF
 
 %files
