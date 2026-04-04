@@ -7,7 +7,7 @@
 # NOTE	Source1 & yml.
 
 Name:		python-ruff
-Version:	0.15.8
+Version:	0.15.9
 Release:	1
 Summary:	An extremely fast Python linter and code formatter, written in Rust
 URL:		https://pypi.org/project/ruff/
@@ -54,8 +54,14 @@ replace-with = "vendored-sources"
 directory = "vendor"
 EOF
 
+%build -p
+export CARGO_HOME=$PWD/.cargo
+# sort out crate licenses
+%cargo_license_summary
+%{cargo_license} > LICENSES.dependencies
+
 %files
+%license LICENSE LICENSES.dependencies
 %{_bindir}/%{module}
 %{python3_sitearch}/%{module}
 %{python3_sitearch}/%{module}-%{version}.dist-info
-%license LICENSE
