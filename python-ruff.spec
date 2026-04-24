@@ -7,7 +7,7 @@
 # NOTE	Source1 & yml.
 
 Name:		python-ruff
-Version:	0.15.11
+Version:	0.15.12
 Release:	1
 Summary:	An extremely fast Python linter and code formatter, written in Rust
 License:	MIT
@@ -45,11 +45,6 @@ replace-with = "vendored-sources"
 [source."git+https://github.com/astral-sh/lsp-types.git?rev=e15db0593f0ecbbd80599c3f5880e4bf5da1ca0c"]
 git = "https://github.com/astral-sh/lsp-types.git"
 rev = "e15db0593f0ecbbd80599c3f5880e4bf5da1ca0c"
-replace-with = "vendored-sources"
-
-[source."git+https://github.com/salsa-rs/salsa.git?rev=2f687a17ceea8ec7aaa605561ccbde938ccef086"]
-git = "https://github.com/salsa-rs/salsa.git"
-rev = "2f687a17ceea8ec7aaa605561ccbde938ccef086"
 replace-with = "vendored-sources"
 
 [source.vendored-sources]
