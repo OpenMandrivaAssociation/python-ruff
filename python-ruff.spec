@@ -7,7 +7,7 @@
 # NOTE	Source1 & yml.
 
 Name:		python-ruff
-Version:	0.15.15
+Version:	0.15.16
 Release:	1
 Summary:	An extremely fast Python linter and code formatter, written in Rust
 License:	MIT
@@ -15,8 +15,10 @@ Group:		Development/Python
 URL:		https://pypi.org/project/ruff/
 Source0:	https://files.pythonhosted.org/packages/source/r/ruff/%{oname}-%{version}.tar.gz
 Source1:	%{module}-%{version}-vendor.tar.xz
-BuildSystem:	python
 
+BuildSystem:	python
+BuildOption(prep):	-p1
+BuildOption(prep):	-a1
 BuildRequires:	cargo
 BuildRequires:	make
 BuildRequires:	pkgconfig(python)
@@ -33,8 +35,6 @@ Ruff aims to be orders of magnitude faster than alternative tools while
 integrating more functionality behind a single, common interface.
 
 %prep -a
-# Extract vendored crates
-tar xf %{S:1}
 # Prep vendored crates dir
 %cargo_prep -v vendor/
 
