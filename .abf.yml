@@ -1,2 +1,3 @@
 sources:
   ruff-0.17.0.tar.gz: 7f4ad0f3141f800743ffc37ce18e884fb7bd95bb
+  ruff-0.17.0-vendor.tar.xz: b839367726fd292a09202bef34b00dacf37e7c01
